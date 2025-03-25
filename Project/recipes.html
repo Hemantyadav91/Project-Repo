@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookMaster | Recipes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">CookMaster</h1>
+        </nav>
+    </header>
+
+    <main class="recipes-page">
+        <section class="recipes-hero">
+            <div class="container">
+                <h1>Discover Delicious Recipes</h1>
+                <p>Explore a world of culinary delights</p>
+            </div>
+        </section>
+
+        <section class="recipes-filter-section">
+            <div class="container">
+                <div class="filter-container">
+                    <div class="search-bar">
+                        <input type="text" id="recipe-search" placeholder="Search recipes...">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+
+                    <div class="advanced-filters">
+                        <div class="filter-group">
+                            <label for="category-filter">Category</label>
+                            <select id="category-filter">
+                                <option value="">All Categories</option>
+                                <option value="breakfast">Breakfast</option>
+                                <option value="lunch">Lunch</option>
+                                <option value="dinner">Dinner</option>
+                                <option value="dessert">Dessert</option>
+                                <option value="vegetarian">Vegetarian</option>
+                                <option value="vegan">Vegan</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="difficulty-filter">Difficulty</label>
+                            <select id="difficulty-filter">
+                                <option value="">All Levels</option>
+                                <option value="easy">Easy</option>
+                                <option value="medium">Medium</option>
+                                <option value="hard">Hard</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <label for="time-filter">Cooking Time</label>
+                            <select id="time-filter">
+                                <option value="">Any Time</option>
+                                <option value="15">Under 15 mins</option>
+                                <option value="30">Under 30 mins</option>
+                                <option value="60">Under 1 hour</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipes-grid-section">
+            <div class="container">
+                <div id="recipes-container" class="recipes-grid">
+                    <!-- Recipes will be dynamically populated here -->
+                </div>
+
+                <div class="pagination">
+                    <button id="prev-page" class="page-btn">
+                        <i class="fas fa-chevron-left"></i> Previous
+                    </button>
+                    <span id="page-info">Page 1 of 1</span>
+                    <button id="next-page" class="page-btn">
+                        Next <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="recipe-submission-cta">
+            <div class="container">
+                <h2>Have a Delicious Recipe to Share?</h2>
+                <p>Contribute to our community and inspire other home chefs!</p>
+                <button class="cta-btn" id="submit-recipe-btn">Submit Your Recipe</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CookMaster</h3>
+                    <p>Discover, Cook, Share</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 CookMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Recipe Submission Modal -->
+    <div id="recipe-submission-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Submit Your Recipe</h2>
+            <form id="recipe-submission-form">
+                <div class="form-group">
+                    <label for="recipe-name">Recipe Name</label>
+                    <input type="text" id="recipe-name" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-description">Description</label>
+                    <textarea id="recipe-description" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-category">Category</label>
+                    <select id="recipe-category" required>
+                        <option value="">Select Category</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="lunch">Lunch</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="dessert">Dessert</option>
+                        <option value="vegetarian">Vegetarian</option>
+                        <option value="vegan">Vegan</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-difficulty">Difficulty</label>
+                    <select id="recipe-difficulty" required>
+                        <option value="">Select Difficulty</option>
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-time">Cooking Time (minutes)</label>
+                    <input type="number" id="recipe-time" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-ingredients">Ingredients</label>
+                    <textarea id="recipe-ingredients" required placeholder="Enter ingredients, one per line"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-instructions">Instructions</label>
+                    <textarea id="recipe-instructions" required placeholder="Enter cooking instructions, one step per line"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="recipe-image">Recipe Image</label>
+                    <input type="file" id="recipe-image" accept="image/*">
+                </div>
+                <button type="submit" class="submit-btn">Submit Recipe</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="recipes.js"></script>
+</body>
+</html>

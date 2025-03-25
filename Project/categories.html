@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Categories | CookMaster</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo">CookMaster</h1>
+        </nav>
+    </header>
+
+    <main class="categories-page">
+        <section class="categories-hero">
+            <div class="container">
+                <h1>Explore Recipe Categories</h1>
+                <p>Discover delicious recipes from various cuisines and meal types</p>
+            </div>
+        </section>
+
+        <section class="categories-grid">
+            <div class="container">
+                <div class="category-list">
+                    <div class="category-item" data-category="breakfast">
+                        <div class="category-icon"><i class="fas fa-coffee"></i></div>
+                        <h3>Breakfast</h3>
+                        <p>Start your day with delightful morning meals</p>
+                        <a href="recipes.html?category=breakfast" class="category-link">View Recipes</a>
+                    </div>
+                    <div class="category-item" data-category="lunch">
+                        <div class="category-icon"><i class="fas fa-hamburger"></i></div>
+                        <h3>Lunch</h3>
+                        <p>Satisfying midday dishes from around the world</p>
+                        <a href="recipes.html?category=lunch" class="category-link">View Recipes</a>
+                    </div>
+                    <div class="category-item" data-category="dinner">
+                        <div class="category-icon"><i class="fas fa-utensils"></i></div>
+                        <h3>Dinner</h3>
+                        <p>Hearty and delicious evening meals</p>
+                        <a href="recipes.html?category=dinner" class="category-link">View Recipes</a>
+                    </div>
+                    <div class="category-item" data-category="dessert">
+                        <div class="category-icon"><i class="fas fa-ice-cream"></i></div>
+                        <h3>Desserts</h3>
+                        <p>Sweet treats and indulgent delights</p>
+                        <a href="recipes.html?category=dessert" class="category-link">View Recipes</a>
+                    </div>
+                    <div class="category-item" data-category="vegetarian">
+                        <div class="category-icon"><i class="fas fa-leaf"></i></div>
+                        <h3>Vegetarian</h3>
+                        <p>Plant-based recipes full of flavor</p>
+                        <a href="recipes.html?category=vegetarian" class="category-link">View Recipes</a>
+                    </div>
+                    <div class="category-item" data-category="vegan">
+                        <div class="category-icon"><i class="fas fa-seedling"></i></div>
+                        <h3>Vegan</h3>
+                        <p>100% plant-based culinary creations</p>
+                        <a href="recipes.html?category=vegan" class="category-link">View Recipes</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="category-cta">
+            <div class="container">
+                <h2>Can't Find Your Favorite Category?</h2>
+                <p>Submit a recipe and help expand our culinary collection!</p>
+                <a href="#" class="cta-btn">Submit Recipe</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CookMaster</h3>
+                    <p>Discover, Cook, Share</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li><a href="categories.html">Categories</a></li>
+                        <li><a href="#">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Connect With Us</h4>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email">
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; 2025 CookMaster. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="categories.js"></script>
+</body>
+</html>
